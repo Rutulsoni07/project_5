@@ -1,0 +1,71 @@
+Q.2 Write a Program to find the largest element from a given 2D array.
+For example,
+Input:
+Enter the array's row size: 3
+Enter the array's column size: 3
+
+Enter array's elements:
+a[0][0] = 2
+a[0][1] = 7
+a[0][2] = 1
+a[1][0] = 3
+a[1][1] = 5
+a[1][2] = 4
+a[2][0] = 8
+a[2][1] = 9
+a[2][2] = 6
+
+Output:
+The largest element is: 9
+
+input=
+#include <stdio.h>
+
+int main() {
+   int row,col,j,large;
+   printf("enter array row's size:");
+   scanf("%d",&row);
+ 
+   printf("enter array col's size:");
+   scanf("%d",&col);
+   
+  printf("Enter array element:\n");
+  
+  int a[row][col];
+  for(int i=0;i<row;i++){
+      for(int j=0;j<col;j++){
+          printf("a[%d][%d]=",i,j);
+          scanf("%d",&a[i][j]);
+      }
+  }
+ large = a[0][0];
+    for(int i=0;i<row;i++) {
+        for(int j=0;j<col;j++) {
+            if(a[i][j] > large) {
+                large = a[i][j];
+            }
+        }
+    }
+    printf("The largest element is: %d\n", large);
+
+    return 0;
+}
+
+output=
+/tmp/E92Wm9QSrD.o
+enter array row's size:3
+enter array col's size:3
+Enter array element:
+a[0][0]=2
+a[0][1]=7
+a[0][2]=1
+a[1][0]=3
+a[1][1]=5
+a[1][2]=4
+a[2][0]=8
+a[2][1]=9
+a[2][2]=6
+The largest element is: 9
+
+
+=== Code Execution Successful ===
