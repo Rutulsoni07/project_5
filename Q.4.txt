@@ -1,0 +1,94 @@
+Q.4 Write a Program to print and find the sum of all elements of a given row & column from a 2D array.
+For example,
+Input:
+Enter the array's row size: 3
+Enter the array's column size: 3
+
+
+Enter array's elements:
+a[0][0] = 2
+a[0][1] = 7
+a[0][2] = 1
+a[1][0] = 3
+a[1][1] = 5
+a[1][2] = 4
+a[2][0] = 8
+a[2][1] = 9
+a[2][2] = 6
+
+
+Output:
+Enter row number: 0
+Elements of row 0: 2, 7, 1
+The sum of a row 0: 10
+
+
+Enter column number: 2
+Elements of column 2: 1, 4, 6
+The sum of column 2: 11
+Ans: #include <stdio.h>
+
+
+int main() {
+    int n,f;
+    printf("Enter the array's row size: ");
+    scanf("%d", &n);
+    printf("Enter the array's column size: ");
+    scanf("%d", &f);
+
+
+    int a[n][f];
+
+
+    printf("Enter array's elements:\n");
+    for (int i = 0; i <n; i++) {
+        for (int j = 0; j < f; j++) {
+            printf("a[%d][%d] = ", i, j);
+            scanf("%d", &a[i][j]);
+        }
+    }
+
+
+    int Num1, Num2;
+      int Sumrow = 0, Sumcol = 0;
+    printf("Enter row number: ");
+    scanf("%d", &Num1);
+       printf("Elements of row %d: ", Num1);
+    for (int j = 0; j < f; j++) {
+        printf("%d, ", a[Num1][j]);
+        Sumrow =Sumrow + a[Num1][j];
+    }
+    printf("\nThe sum of a row %d: %d\n", Num1, Sumrow);
+    
+    printf("Enter column number: ");
+    scanf("%d", &Num2);
+    printf("Elements of column %d: ", Num2);
+    for (int i = 0; i < n; i++) {
+        printf("%d, ", a[i][Num2]);
+        Sumcol =Sumcol +a[i][Num2];
+    }
+    printf("\nThe sum of column %d: %d\n", Num1, Sumcol);
+
+
+    return 0;
+}
+O\p: /tmp/Ldwr1tHwTq.o
+Enter the array's row size: 3
+Enter the array's column size: 3
+Enter array's elements:
+a[0][0] = 2
+a[0][1] = 7
+a[0][2] = 1
+a[1][0] = 3
+a[1][1] = 5
+a[1][2] = 4
+a[2][0] = 8
+a[2][1] = 9
+a[2][2] = 6
+Enter row number: 0
+Elements of row 0: 2, 7, 1, 
+The sum of a row 0: 10
+Enter column number: 2
+Elements of column 2: 1, 4, 6, 
+The sum of column 0: 11
+
